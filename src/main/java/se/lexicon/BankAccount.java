@@ -16,7 +16,10 @@ public class BankAccount {
     }
 
     public void deposit(double value){
-        this.balance += value;
+        if(value != 0) {
+            this.balance += value;
+        } else
+            System.out.println("You need to deposit a value.");
     }
 
     public void withdraw(double value){
